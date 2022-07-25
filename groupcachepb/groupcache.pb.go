@@ -2,11 +2,11 @@
 // source: groupcache.proto
 // DO NOT EDIT!
 
-package groupcachepb
+package groupsyncpb
 
-import proto "github.com/golang/protobuf/proto"
-import json "encoding/json"
-import math "math"
+import "github.com/golang/protobuf/proto"
+import "encoding/json"
+import "math"
 
 // Reference proto, json, and math imports to suppress error if they are not otherwise used.
 var _ = proto.Marshal

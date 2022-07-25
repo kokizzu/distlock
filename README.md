@@ -1,11 +1,14 @@
-# groupcache
+# GroupSync
+
+This is a fork of [golang/groupsync](//github.com/golang/groupsync).
+That aims not just to 
 
 ## Summary
 
 groupcache is a distributed caching and cache-filling library, intended as a
 replacement for a pool of memcached nodes in many cases.
 
-For API docs and examples, see http://godoc.org/github.com/golang/groupcache
+For API docs and examples, see http://godoc.org/github.com/kokizzu/groupsync
 
 ## Comparison to memcached
 

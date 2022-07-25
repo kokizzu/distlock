@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package groupcache
+package groupsync
 
 import (
 	"bytes"
@@ -26,9 +26,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/golang/groupcache/consistenthash"
-	pb "github.com/golang/groupcache/groupcachepb"
 	"github.com/golang/protobuf/proto"
+	"github.com/kokizzu/groupsync/consistenthash"
+	pb "github.com/kokizzu/groupsync/groupcachepb"
 )
 
 const defaultBasePath = "/_groupcache/"

@@ -16,12 +16,12 @@ limitations under the License.
 
 // peers.go defines how processes find and communicate with their peers.
 
-package groupcache
+package groupsync
 
 import (
 	"context"
 
-	pb "github.com/golang/groupcache/groupcachepb"
+	pb "github.com/kokizzu/groupsync/groupcachepb"
 )
 
 // Context is an alias to context.Context for backwards compatibility purposes.

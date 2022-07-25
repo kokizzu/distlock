@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-// Package groupcache provides a data loading mechanism with caching
+// Package groupsync provides a data loading mechanism with caching
 // and de-duplication that works across a set of peer processes.
 //
 // Each data Get first consults its local cache, otherwise delegates
@@ -22,7 +22,7 @@ limitations under the License.
 // or finally gets the data.  In the common case, many concurrent
 // cache misses across a set of peers for the same key result in just
 // one cache fill.
-package groupcache
+package groupsync
 
 import (
 	"context"
@@ -32,9 +32,9 @@ import (
 	"sync"
 	"sync/atomic"
 
-	pb "github.com/golang/groupcache/groupcachepb"
-	"github.com/golang/groupcache/lru"
-	"github.com/golang/groupcache/singleflight"
+	pb "github.com/kokizzu/groupsync/groupcachepb"
+	"github.com/kokizzu/groupsync/lru"
+	"github.com/kokizzu/groupsync/singleflight"
 )
 
 // A Getter loads data for a key.
