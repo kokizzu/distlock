@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package groupsync
+package distlock
 
 import (
 	"bytes"
@@ -27,8 +27,8 @@ import (
 	"sync"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/kokizzu/groupsync/consistenthash"
-	pb "github.com/kokizzu/groupsync/groupcachepb"
+	"github.com/kokizzu/distlock/consistenthash"
+	pb "github.com/kokizzu/distlock/groupcachepb"
 )
 
 const defaultBasePath = "/_groupcache/"

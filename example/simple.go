@@ -15,8 +15,6 @@ import (
 	"log"
 	"net/http"
 	"strings"
-
-	"github.com/kokizzu/groupsync"
 )
 
 var Store = map[string][]byte{

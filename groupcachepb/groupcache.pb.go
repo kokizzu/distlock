@@ -2,7 +2,7 @@
 // source: groupcache.proto
 // DO NOT EDIT!
 
-package groupsyncpb
+package distlockpb
 
 import "github.com/golang/protobuf/proto"
 import "encoding/json"

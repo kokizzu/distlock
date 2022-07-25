@@ -1,5 +1,5 @@
 language: go
-go_import_path: github.com/kokizzu/groupsync
+go_import_path: github.com/kokizzu/distlock
 
 os: linux
 dist: trusty

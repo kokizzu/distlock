@@ -16,12 +16,12 @@ limitations under the License.
 
 // peers.go defines how processes find and communicate with their peers.
 
-package groupsync
+package distlock
 
 import (
 	"context"
 
-	pb "github.com/kokizzu/groupsync/groupcachepb"
+	pb "github.com/kokizzu/distlock/groupcachepb"
 )
 
 // Context is an alias to context.Context for backwards compatibility purposes.

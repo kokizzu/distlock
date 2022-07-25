@@ -1,4 +1,4 @@
-module github.com/kokizzu/groupsync
+module github.com/kokizzu/distlock
 
 go 1.18
 

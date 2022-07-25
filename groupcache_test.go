@@ -16,7 +16,7 @@ limitations under the License.
 
 // Tests for groupcache.
 
-package groupsync
+package distlock
 
 import (
 	"context"
@@ -32,8 +32,8 @@ import (
 
 	"github.com/golang/protobuf/proto"
 
-	pb "github.com/kokizzu/groupsync/groupcachepb"
-	"github.com/kokizzu/groupsync/testpb"
+	pb "github.com/kokizzu/distlock/groupcachepb"
+	"github.com/kokizzu/distlock/testpb"
 )
 
 var (

@@ -16,7 +16,7 @@ limitations under the License.
 
 syntax = "proto2";
 
-package groupsyncpb;
+package distlockpb;
 
 message GetRequest {
   required string group = 1;

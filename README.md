@@ -1,14 +1,14 @@
-# GroupSync
+# DistLock
 
 This is a fork of [golang/groupsync](//github.com/golang/groupsync).
-That aims not just to 
+Using the original code to create distributed lock (not partition tolerant). 
 
 ## Summary
 
 groupcache is a distributed caching and cache-filling library, intended as a
 replacement for a pool of memcached nodes in many cases.
 
-For API docs and examples, see http://godoc.org/github.com/kokizzu/groupsync
+For API docs and examples, see http://godoc.org/github.com/kokizzu/distlock
 
 ## Comparison to memcached
 
