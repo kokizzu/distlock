@@ -15,6 +15,8 @@ import (
 	"log"
 	"net/http"
 	"strings"
+
+	"distlock"
 )
 
 var Store = map[string][]byte{
@@ -23,8 +25,8 @@ var Store = map[string][]byte{
 	"blue":  []byte("#0000FF"),
 }
 
-var Group = groupsync.NewGroup("foobar", 64<<20, groupsync.GetterFunc(
-	func(ctx groupsync.Context, key string, dest groupsync.Sink) error {
+var Group = distlock.NewGroup("foobar", 64<<20, distlock.GetterFunc(
+	func(ctx distlock.Context, key string, dest distlock.Sink) error {
 		log.Println("looking up", key)
 		v, ok := Store[key]
 		if !ok {
@@ -42,7 +44,7 @@ func main() {
 		color := r.FormValue("name")
 		log.Println("/color uri hit", color)
 		var b []byte
-		err := Group.Get(context.Background(), color, groupsync.AllocatingByteSliceSink(&b))
+		err := Group.Get(context.Background(), color, distlock.AllocatingByteSliceSink(&b))
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusNotFound)
 			return
@@ -51,7 +53,7 @@ func main() {
 		_, _ = w.Write([]byte{'\n'})
 	})
 	p := strings.Split(*peers, ",")
-	pool := groupsync.NewHTTPPool(p[0])
+	pool := distlock.NewHTTPPool(p[0])
 	pool.Set(p...)
 	log.Fatal(http.ListenAndServe(*addr, nil))
 }
